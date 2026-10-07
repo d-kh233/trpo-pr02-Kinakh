@@ -1,0 +1,65 @@
+@use 'variables' as *;
+
+.main {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: $space;
+}
+
+.site-header {
+  background-color: $surface;
+  padding: $space;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space;
+}
+
+.site-title {
+  text-align: center;
+}
+
+.site-nav {
+  width: 100%;
+  background-color: $background;
+  border-radius: $radius;
+  padding: 10px 20px;
+  font-size: large;
+  text-align: center;
+  display: flex;
+  gap: $space;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space;
+}
+
+.category-list {
+  display: flex;
+  justify-content: center;
+  gap: $space;
+  flex-wrap: wrap;
+}
+
+footer {
+  margin-top: 30px;
+  padding: $space;
+  background-color: $surface;
+
+  p {
+    text-align: center;
+    color: #9e9fa0;
+  }
+}
