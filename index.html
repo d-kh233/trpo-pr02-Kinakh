@@ -11,136 +11,60 @@
         <h1 class="site-title">Учебный каталог</h1>
         <nav class="site-nav">
             <a class="nav-link" href="#filters">Фильтры</a>
-            <a class="nav-link" href="#cards">Каталог</a>
             <a class="nav-link" href="#information">О каталоге</a>
+            <a class="nav-link" href="#cards">Каталог</a>
         </nav>
     </header>
 
     <main class="main">
 
-        <section id = "filters">
-            <form class="filters-form">
-                <div class="search-box">
-                    <input id="search-input" name="query" type="search" placeholder="Поиск товара или категории" class="search-input">
-                </div>
+        <!-- Фильтры -->
+        <div class="layout">
+            
+            <aside id="filters" class="filters">
+                <h2>Фильтры</h2>
+                <form class="filters-form">
+                    <div class="search-box">
+                        <label for="search-input" class="visually-hidden">Поиск</label>
+                        <input id="search-input" name="query" type="search" placeholder="Поиск товара или категории" class="search-input">
+                    </div>
 
-                <div class="filter-options">
-                    <fieldset class="sort-group">
-                        <legend class="sort-title">Сортировка</legend>
-                        <input type="radio" id="sort-price" name="sort_type" value="price" class="radio-input">
-                        <label for="sort-price">Цена</label>
-                        <input type="radio" id="sort-rating" name="sort_type" value="rating" class="radio-input">
-                        <label for="sort-rating">Рейтинг</label>
-                    </fieldset>
+                    <div class="filter-options">
+                        <fieldset class="sort-group">
+                            <legend class="sort-title">Сортировка</legend>
+                            
+                            <label for="sort-price">
+                                <input type="radio" id="sort-price" name="sort_type" value="price" class="radio-input">
+                                Цена
+                            </label>
+                            
+                            <label for="sort-rating">
+                                <input type="radio" id="sort-rating" name="sort_type" value="rating" class="radio-input">
+                                Рейтинг
+                            </label>
+                        </fieldset>
 
-                    <fieldset class="price-filter">
-                        <legend class="price-title">Цена</legend>
+                        <fieldset class="price-filter">
+                            <legend class="price-title">Цена</legend>
 
-                        <label class="price-item">
-                            <span class="price-label">От</span>
-                            <input class="price-input" name="price_from" type="number">
-                        </label>
+                            <label class="price-item">
+                                <span class="price-label">От</span>
+                                <input class="price-input" name="price_from" type="number" min="0">
+                            </label>
 
-                        <label class="price-item">
-                            <span class="price-label">До</span>
-                            <input class="price-input" name="price_to" type="number">
-                        </label>
-                    </fieldset>
+                            <label class="price-item">
+                                <span class="price-label">До</span>
+                                <input class="price-input" name="price_to" type="number" min="0">
+                            </label>
+                        </fieldset>
 
-                    <input type="submit" value="Применить фильтры" id="apply-btn" class="btn-submit">
-                </div>
-            </form>
-        </section>
+                        <button type="submit" id="apply-btn" class="btn-submit">Применить фильтры</button>
+                    </div>
+                </form>
+            </aside>
 
-        <section id = "cards">
-            <div class="cards-grid">
-                <article id="item-1" class="catalog-card">
-                    <h3 class="card-title">Учебный товар 1</h3>
-                    <p class="card-type">Категория книги</p>
-                    <p class="card-cost">Цена 575</p>
-                    <p class="card-score">Рейтинг 4.0</p>
-                </article>
-
-                <article id="item-2" class="catalog-card">
-                    <h3 class="card-title">Учебный товар 2</h3>
-                    <p class="card-type">Категория курсы</p>
-                    <p class="card-cost">Цена 660</p>
-                    <p class="card-score">Рейтинг 4.2</p>
-                </article>
-
-                <article id="item-3" class="catalog-card">
-                    <h3 class="card-title">Учебный товар 3</h3>
-                    <p class="card-type">Категория инструменты</p>
-                    <p class="card-cost">Цена 745</p>
-                    <p class="card-score">Рейтинг 4.4</p>
-                </article>
-
-                <article id="item-4" class="catalog-card">
-                    <h3 class="card-title">Учебный товар 4</h3>
-                    <p class="card-type">Категория книги</p>
-                    <p class="card-cost">Цена 830</p>
-                    <p class="card-score">Рейтинг 4.6</p>
-                </article>
-
-                <article id="item-5" class="catalog-card">
-                    <h3 class="card-title">Учебный товар 5</h3>
-                    <p class="card-type">Категория курсы</p>
-                    <p class="card-cost">Цена 915</p>
-                    <p class="card-score">Рейтинг 4.8</p>
-                </article>
-
-                <article id="item-6" class="catalog-card">
-                    <h3 class="card-title">Учебный товар 6</h3>
-                    <p class="card-type">Категория инструменты</p>
-                    <p class="card-cost">Цена 1000</p>
-                    <p class="card-score">Рейтинг 3.8</p>
-                </article>
-
-                <article id="item-7" class="catalog-card">
-                    <h3 class="card-title">Учебный товар 7</h3>
-                    <p class="card-type">Категория книги</p>
-                    <p class="card-cost">Цена 1085</p>
-                    <p class="card-score">Рейтинг 4.0</p>
-                </article>
-
-                <article id="item-8" class="catalog-card">
-                    <h3 class="card-title">Учебный товар 8</h3>
-                    <p class="card-type">Категория курсы</p>
-                    <p class="card-cost">Цена 1170</p>
-                    <p class="card-score">Рейтинг 4.2</p>
-                </article>
-
-                <article id="item-9" class="catalog-card">
-                    <h3 class="card-title">Учебный товар 9</h3>
-                    <p class="card-type">Категория инструменты</p>
-                    <p class="card-cost">Цена 1255</p>
-                    <p class="card-score">Рейтинг 4.4</p>
-                </article>
-
-                <article id="item-10" class="catalog-card">
-                    <h3 class="card-title">Учебный товар 10</h3>
-                    <p class="card-type">Категория книги</p>
-                    <p class="card-cost">Цена 1340</p>
-                    <p class="card-score">Рейтинг 4.6</p>
-                </article>
-
-                <article id="item-11" class="catalog-card">
-                    <h3 class="card-title">Учебный товар 11</h3>
-                    <p class="card-type">Категория курсы</p>
-                    <p class="card-cost">Цена 1425</p>
-                    <p class="card-score">Рейтинг 4.8</p>
-                </article>
-
-                <article id="item-12" class="catalog-card">
-                    <h3 class="card-title">Учебный товар 12</h3>
-                    <p class="card-type">Категория инструменты</p>
-                    <p class="card-cost">Цена 1510</p>
-                    <p class="card-score">Рейтинг 3.8</p>
-                </article>
-            </div>
-        </section>
-
-        <section id = "information">
+        
+        <section id="information">
             <h2>О каталоге</h2>
             <p class="info-text">Каталог содержит товары 3 категорий</p>
 
@@ -160,15 +84,119 @@
             </div>
         </section>
 
+        <!-- Каталог карточек -->
+        <section id="cards" class="catalog-section">
+                <h2>Каталог</h2>
+                <div class="cards-grid">
+                    <article id="item-1" class="catalog-card">
+                        <img src="images/product-01.svg" alt="Учебный товар 1" class="card-img">
+                        <h3 class="card-title">Учебный товар 1</h3>
+                        <p class="card-type">Категория книги</p>
+                        <p class="card-cost">Цена 575</p>
+                        <p class="card-score">Рейтинг 4.0</p>
+                    </article>
+
+                    <article id="item-2" class="catalog-card">
+                        <img src="images/product-02.svg" alt="Учебный товар 2" class="card-img">
+                        <h3 class="card-title">Учебный товар 2</h3>
+                        <p class="card-type">Категория курсы</p>
+                        <p class="card-cost">Цена 660</p>
+                        <p class="card-score">Рейтинг 4.2</p>
+                    </article>
+
+                    <article id="item-3" class="catalog-card">
+                        <img src="images/product-03.svg" alt="Учебный товар 3" class="card-img">
+                        <h3 class="card-title">Учебный товар 3</h3>
+                        <p class="card-type">Категория инструменты</p>
+                        <p class="card-cost">Цена 745</p>
+                        <p class="card-score">Рейтинг 4.4</p>
+                    </article>
+
+                    <article id="item-4" class="catalog-card">
+                        <img src="images/product-01.svg" alt="Учебный товар 4" class="card-img">
+                        <h3 class="card-title">Учебный товар 4</h3>
+                        <p class="card-type">Категория книги</p>
+                        <p class="card-cost">Цена 830</p>
+                        <p class="card-score">Рейтинг 4.6</p>
+                    </article>
+
+                    <article id="item-5" class="catalog-card">
+                        <img src="images/product-02.svg" alt="Учебный товар 5" class="card-img">
+                        <h3 class="card-title">Учебный товар 5</h3>
+                        <p class="card-type">Категория курсы</p>
+                        <p class="card-cost">Цена 915</p>
+                        <p class="card-score">Рейтинг 4.8</p>
+                    </article>
+
+                    <article id="item-6" class="catalog-card">
+                        <img src="images/product-03.svg" alt="Учебный товар 6" class="card-img">
+                        <h3 class="card-title">Учебный товар 6</h3>
+                        <p class="card-type">Категория инструменты</p>
+                        <p class="card-cost">Цена 1000</p>
+                        <p class="card-score">Рейтинг 3.8</p>
+                    </article>
+
+                    <article id="item-7" class="catalog-card">
+                        <img src="images/product-01.svg" alt="Учебный товар 7" class="card-img">
+                        <h3 class="card-title">Учебный товар 7</h3>
+                        <p class="card-type">Категория книги</p>
+                        <p class="card-cost">Цена 1085</p>
+                        <p class="card-score">Рейтинг 4.0</p>
+                    </article>
+
+                    <article id="item-8" class="catalog-card">
+                        <img src="images/product-02.svg" alt="Учебный товар 8" class="card-img">
+                        <h3 class="card-title">Учебный товар 8</h3>
+                        <p class="card-type">Категория курсы</p>
+                        <p class="card-cost">Цена 1170</p>
+                        <p class="card-score">Рейтинг 4.2</p>
+                    </article>
+
+                    <article id="item-9" class="catalog-card">
+                        <img src="images/product-03.svg" alt="Учебный товар 9" class="card-img">
+                        <h3 class="card-title">Учебный товар 9</h3>
+                        <p class="card-type">Категория инструменты</p>
+                        <p class="card-cost">Цена 1255</p>
+                        <p class="card-score">Рейтинг 4.4</p>
+                    </article>
+
+                    <article id="item-10" class="catalog-card">
+                        <img src="images/product-01.svg" alt="Учебный товар 10" class="card-img">
+                        <h3 class="card-title">Учебный товар 10</h3>
+                        <p class="card-type">Категория книги</p>
+                        <p class="card-cost">Цена 1340</p>
+                        <p class="card-score">Рейтинг 4.6</p>
+                    </article>
+
+                    <article id="item-11" class="catalog-card">
+                        <img src="images/product-02.svg" alt="Учебный товар 11" class="card-img">
+                        <h3 class="card-title">Учебный товар 11</h3>
+                        <p class="card-type">Категория курсы</p>
+                        <p class="card-cost">Цена 1425</p>
+                        <p class="card-score">Рейтинг 4.8</p>
+                    </article>
+
+                    <article id="item-12" class="catalog-card">
+                        <img src="images/product-03.svg" alt="Учебный товар 12" class="card-img">
+                        <h3 class="card-title">Учебный товар 12</h3>
+                        <p class="card-type">Категория инструменты</p>
+                        <p class="card-cost">Цена 1510</p>
+                        <p class="card-score">Рейтинг 3.8</p>
+                    </article>
+                </div>
+            </section>
+
+        </div>
+
     </main>
 
     <footer>
-            <p>
-        2026 
-        <br>Дисциплина: Технологии разработки программного обеспечения 
-        <br> Группа: ЭПБО-01-25
-        <br> Кинах Дарья
-    </p>
+        <p>
+            2026 
+            <br>Дисциплина: Технологии разработки программного обеспечения 
+            <br> Группа: ЭПБО-01-25
+            <br> Кинах Дарья
+        </p>
     </footer>
 
 </body>

@@ -1,4 +1,5 @@
 @use 'variables' as *;
+@use 'functions' as *;
 
 .main {
   max-width: 80%;
@@ -7,6 +8,22 @@
   display: flex;
   flex-direction: column;
   gap: $space;
+}
+
+
+.layout {
+  display: grid;
+  grid-template-columns: rem(320px) 1fr;
+  gap: rem(20px);
+  align-items: start;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.catalog-section {
+  grid-column: 1 / -1;   // секция каталога занимает всю ширину
 }
 
 .site-header {

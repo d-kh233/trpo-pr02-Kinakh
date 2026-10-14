@@ -81,17 +81,26 @@
     @include focus-state;
   }
 }
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $space;
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 560px) {
+    grid-template-columns: 1fr;
+  }
+}
+
 .catalog-card {
   @include card-base;
-  flex: 1 1 calc(33.333% - #{$space});
-  min-width: rem(260px);
   display: flex;
   flex-direction: column;
   gap: rem(10px);
-
-  @media (max-width: 768px) {
-    flex: 1 1 100%;
-  }
+  width: 100%;
 }
 .card-cost {
   color: $accent;
